@@ -1,0 +1,73 @@
+name: CI/CD Deployment
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 20
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log in to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+              # Set up Docker Compose (optional if compose is already included in the runner)
+      - name: Install Docker Compose
+        run: sudo apt-get update && sudo apt-get install -y docker-compose
+
+
+      - name: Set API_URL based on branch
+        run: |
+          if [ "${GITHUB_REF##*/}" = "dev" ]; then
+            echo "NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL_DEV }}" >> .env
+            echo "TAG=dev" >> $GITHUB_ENV
+          else
+            echo "NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL_PROD }}" >> .env
+            echo "TAG=latest" >> $GITHUB_ENV
+          fi
+
+      - name: Build and Push Docker Image with Docker Compose
+        run: |
+          docker-compose build
+          docker tag woodinvisionfe tahirli/woodinvisionfe:${TAG}
+          docker push tahirli/woodinvisionfe:${TAG}
+
+
+      - name: Deploy to Production Server
+        if: github.ref == 'refs/heads/main'
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.SERVER_PROD_HOST }}
+          username: ${{ secrets.SERVER_PROD_USERNAME }}
+          password: ${{ secrets.SERVER_PROD_PASSWORD }}
+          port: ${{ secrets.SERVER_PROD_PORT }}
+          script: |
+            cd /home/homepages/wivHomepage/frontend/prod
+            docker pull tahirli/woodinvisionfe:latest
+            docker compose down
+            docker compose up -d
+
+      - name: Deploy to Development Server
+        if: github.ref == 'refs/heads/dev'
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.SERVER_PROD_HOST }}
+          username: ${{ secrets.SERVER_PROD_USERNAME }}
+          password: ${{ secrets.SERVER_PROD_PASSWORD }}
+          port: ${{ secrets.SERVER_PROD_PORT }}
+          script: |
+            cd home/homepages/wivHomepage/frontend/dev
+            docker pull tahirli/woodinvisionfe:dev
+            docker compose down
+            docker compose up -d

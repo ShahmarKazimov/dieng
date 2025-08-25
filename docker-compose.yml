@@ -1,0 +1,12 @@
+services:
+  woodinvisionfe:
+    image: woodinvisionfe
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
+    env_file:
+      - .env
+    ports:
+      - "4000:3000"

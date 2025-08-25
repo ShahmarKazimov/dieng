@@ -1,0 +1,8 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="black" fill-opacity="0.08"/>
+<rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#BEBEBE"/>
+<path d="M21.9976 29.1535C20.1598 29.9778 18.9963 31.1703 18.9963 32.5019C18.9963 34.9879 23.027 37.0038 28.0001 37.0038C32.9732 37.0038 37.0038 34.9879 37.0038 32.5019C37.0038 31.1703 35.8404 29.9778 34.0026 29.1535" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.6537 33.0021C30.5696 33.7075 29.2925 34.0572 28.0002 34.0025C26.7079 34.0572 25.4308 33.7075 24.3467 33.0021" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.201 19.9096C31.0929 20.8014 31.3597 22.1427 30.877 23.3079C30.3944 24.4732 29.2573 25.2329 27.9961 25.2329C26.7348 25.2329 25.5978 24.4732 25.1151 23.3079C24.6325 22.1427 24.8993 20.8014 25.7912 19.9096C26.3758 19.3246 27.169 18.9959 27.9961 18.9959C28.8232 18.9959 29.6163 19.3246 30.201 19.9096" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28.0002 25.2308V31.0012" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
