@@ -30,7 +30,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="text-[#323232] p-4 rounded-full font-medium gap-x-3 flex items-center space-x-[10px] leading-[100%] text-[14px] tracking-[-0.01em] w-28 justify-center cursor-pointer bg-white font-[euclid-Bold] hover:bg-green-50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20"
+      className="inline-flex items-center justify-center gap-2.5 px-4 py-4 rounded-lg font-[euclid-Bold] text-sm leading-none tracking-tight transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#b8e92f] text-[#323232] bg-[#bcee30] hover:bg-[#a7d42b] hover:shadow-md w-28 cursor-pointer"
     >
       {pending ? (
         <>
@@ -125,7 +125,7 @@ export default function ContactForm() {
         )}
 
         {/* Name Fields */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="relative">
             <label htmlFor="name" className="block text-[#BDB8B8] mb-3">
               {t('firstName', 'First Name')}*
@@ -139,7 +139,7 @@ export default function ContactForm() {
               autoComplete="given-name"
               suppressHydrationWarning
               onFocus={() => handleInputFocus('name')}
-              className="w-full p-3 bg-[#242832] border border-gray-700 rounded-xl text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full p-3 bg-[#353D35] border border-[#3A5630] text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
               aria-invalid={shouldShowError('name') ? 'true' : 'false'}
             />
             {shouldShowError('name') && state.errors?.name && (
@@ -162,7 +162,7 @@ export default function ContactForm() {
               autoComplete="family-name"
               suppressHydrationWarning
               onFocus={() => handleInputFocus('surname')}
-              className="w-full p-3 bg-[#242832] border border-gray-700 rounded-xl text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full p-3 bg-[#353D35] border border-[#3A5630] text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
               aria-invalid={shouldShowError('surname') ? 'true' : 'false'}
             />
             {shouldShowError('surname') && state.errors?.surname && (
@@ -188,7 +188,7 @@ export default function ContactForm() {
               autoComplete="email"
               suppressHydrationWarning
               onFocus={() => handleInputFocus('email')}
-              className="w-full p-3 bg-[#242832] border border-gray-700 rounded-xl text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full p-3 bg-[#353D35] border border-[#3A5630] text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
               aria-invalid={shouldShowError('email') ? 'true' : 'false'}
             />
             {shouldShowError('email') && state.errors?.email && (
@@ -210,7 +210,7 @@ export default function ContactForm() {
               autoComplete="tel"
               suppressHydrationWarning
               onFocus={() => handleInputFocus('phone')}
-              className="w-full p-3 bg-[#242832] border border-gray-700 rounded-xl text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full p-3 bg-[#353D35] border border-[#3A5630] text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
             />
             {shouldShowError('phone') && state.errors?.phone && (
               <p className="mt-1 text-sm text-red-400">
@@ -233,7 +233,7 @@ export default function ContactForm() {
             autoComplete="organization"
             suppressHydrationWarning
             onFocus={() => handleInputFocus('company')}
-            className="w-full p-3 bg-[#242832] border border-gray-700 rounded-xl text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="w-full p-3 bg-[#353D35] border border-[#3A5630] text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
           />
           {shouldShowError('company') && state.errors?.company && (
             <p className="mt-1 text-sm text-red-400">
@@ -255,7 +255,7 @@ export default function ContactForm() {
             required
             suppressHydrationWarning
             onFocus={() => handleInputFocus('message')}
-            className="w-full p-3 bg-[#242832] border border-gray-700 rounded-xl text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="w-full p-3 bg-[#353D35] border border-[#3A5630] text-[#BDB8B8] placeholder-[#BDB8B8] focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
             aria-invalid={shouldShowError('message') ? 'true' : 'false'}
           />
           {shouldShowError('message') && state.errors?.message && (

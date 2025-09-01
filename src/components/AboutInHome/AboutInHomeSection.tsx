@@ -36,7 +36,7 @@ const AboutBannerSection = async ({ searchParams }: BannerSectionProps) => {
   }
 
   return (
-    <div>
+    <div className='py-20 sm:py-25'>
       {banners.map((banner, index) => (
         <BannerContent
           key={banner.id || index}

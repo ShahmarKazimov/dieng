@@ -50,7 +50,7 @@ const PartnerSection = async ({ searchParams }: PartnerSectionProps) => {
   }
 
   return (
-    <div className="overflow-hidden flex flex-col sm:flex-row items-center justify-between ">
+    <div className="overflow-hidden flex flex-col sm:flex-row items-center justify-between py-10">
       {banners.length > 0 && (
         <div className="text-center mb-0">
           {banners.map((banner, index) => (
