@@ -34,7 +34,7 @@ export default function RootLayout({
           <main>
             <ScrollHeader />
 
-            <div className="relative max-w-[1340px] mx-auto pt-60">{children}</div>
+            <div className="relative px-4 sm:px-0 max-w-[1340px] mx-auto pt-60">{children}</div>
           </main>
           <div>
             <Footer />

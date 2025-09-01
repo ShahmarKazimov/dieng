@@ -3,14 +3,12 @@ import { ProcessedBannerData } from '@/lib/types/banner.types';
 import { bannerTranslationService } from '@/API/Services/banner.service';
 import BannerContent from '@/components/ui/BannerContent';
 import ServiceData from '@/components/Services/ServiceData';
-import PricingSection from '@/components/Pricing/PricingSection';
 
 interface BannerSectionProps {
   searchParams: { lang?: string };
 }
 
 const ServicesSection = async ({ searchParams }: BannerSectionProps) => {
-  const params = await searchParams;
   const currentLanguage = searchParams.lang || 'en';
 
   let banners: ProcessedBannerData[] = [];
@@ -51,8 +49,8 @@ const ServicesSection = async ({ searchParams }: BannerSectionProps) => {
             className={index === 0 ? 'w-max mx-auto pb-[50px]' : ''}
             imageClassName={index === 0 ? 'hidden' : ''}
             titleClassName={
-              index === 0 ? "text-white text-center leading-[120%] text-[32px] sm:w-[783px] w-[343px] sm:text-[42px] font-[euclid-Bold] mb-3" : 
-              index === 1 ? "text-white leading-[120%] text-[24px] sm:text-[32px] font-[euclid-Bold] mb-3 text-center" : ""   
+              index === 0 ? "text-white text-center leading-[120%] text-[32px] sm:w-[783px] w-[343px] sm:text-[42px] font-[euclid-Bold] mb-3" :
+                index === 1 ? "text-white leading-[120%] text-[24px] sm:text-[32px] font-[euclid-Bold] mb-3 text-center" : ""
             }
             descriptionClassName={
               index === 0 ? "text-[#FFFFFFB2] sm:max-w-[783px] text-[14px] sm:w-[783px] w-[343px] text-center mx-auto" : ""
@@ -76,9 +74,6 @@ const ServicesSection = async ({ searchParams }: BannerSectionProps) => {
           )}
           <div>
             <ServiceData />
-          </div>
-          <div>
-            <PricingSection searchParams={params} />
           </div>
         </div>
       </div>

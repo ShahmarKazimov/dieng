@@ -5,9 +5,7 @@ import AboutBannerSection from '@/components/AboutInHome/AboutInHomeSection';
 import { Metadata } from 'next';
 import ClientCarousel from '../components/ClientCarousel/ClientCarousel';
 import PartnerSection from '@/components/Partner/PartnerSection';
-import PricingSection from '@/components/Pricing/PricingSection';
 import ParticipantsBannerSection from '@/components/Participants/ParticipantsSection';
-import LearnMoreSection from '@/components/LearnMoreSection/LearnMoreSection';
 
 interface PageProps {
   searchParams: Promise<{ lang?: string }>;
@@ -68,8 +66,6 @@ export default async function HomePage({ searchParams }: PageProps) {
       <PartnerSection searchParams={params} />
       <ParticipantsBannerSection searchParams={params} />
       <AboutBannerSection searchParams={params} />
-      <PricingSection searchParams={params} />
-      <LearnMoreSection searchParams={params} />
       <ClientCarousel searchParams={params} />
     </div>
   );

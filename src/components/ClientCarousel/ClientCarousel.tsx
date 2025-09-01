@@ -1,7 +1,10 @@
 import React from "react";
-import Image from "next/image"; 
+import Image from "next/image";
 import { clientService } from "@/API/Services/clients.service";
+import { bannerTranslationService } from "@/API/Services/banner.service";
 import { Client } from "@/lib/types/client.types";
+import { ProcessedBannerData } from "@/lib/types/banner.types";
+import BannerContent from "@/components/ui/BannerContent";
 import enTranslations from "@/locales/en.json";
 import deTranslations from "@/locales/de.json";
 
@@ -22,6 +25,7 @@ const ClientCarousel = async ({ searchParams }: ClientCarouselProps) => {
     (translations as Record<string, string>)[key] || fallback || key;
 
   let clients: Client[] = [];
+  let banners: ProcessedBannerData[] = [];
 
   try {
     const response = await clientService.getClients();
@@ -34,13 +38,34 @@ const ClientCarousel = async ({ searchParams }: ClientCarouselProps) => {
     console.error("Error fetching clients:", error);
   }
 
+  try {
+    banners = await bannerTranslationService.getBannersByType(lang, "clients");
+  } catch (error) {
+    console.error("Error fetching client banners:", error);
+  }
+
   const duplicatedClients = [...clients, ...clients, ...clients];
 
   return (
     <div className="py-0 sm:py-25 mb-0">
-      <h1 className="text-white text-[16px] mb-[50px] text-center">
-        {t("our-customers", "Our customers")}
-      </h1>
+      {banners.length > 0 && (
+        <BannerContent
+          bannerData={banners[0]}
+          currentLanguage={lang}
+          index={0}
+          titleClassName="text-white text-[24px] mb-4 sm:text-[32px] text-center"
+          descriptionClassName="text-center  max-w-[691px] text-sm text-[#FFFFFFB2] mb-4"
+          sloganClassName="text-center text-white"
+          className="text-center mb-4 sm:mb-10 sm:w-max mx-auto"
+          imageClassName="hidden"
+          buttonGroupClassName="hidden"
+        />
+      )}
+      {banners.length === 0 && (
+        <h1 className="text-white text-[16px] mb-[50px] text-center">
+          {t("our-customers", "Our customers")}
+        </h1>
+      )}
       <div className="clients">
         <div className="client_items flex gap-4">
           {duplicatedClients.map((client, index) => (
