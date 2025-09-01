@@ -1,5 +1,4 @@
 // app/contact/page.tsx
-
 import { bannerTranslationService } from '@/API/Services/banner.service';
 import { Metadata } from 'next';
 import Contact from '@/components/Contact/ContactSections';
@@ -58,7 +57,7 @@ export default async function ContactPage({ searchParams }: PageProps) {
     const params = await searchParams;
 
     return (
-        <div className="mb-30 mx-auto">
+        <div className="mx-auto">
             <Contact searchParams={params} />
         </div>
     );

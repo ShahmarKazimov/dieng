@@ -61,7 +61,7 @@ export default async function HomePage({ searchParams }: PageProps) {
   const params = await searchParams;
 
   return (
-    <div className="space-y-[50px]">
+    <div>
       <HomeBannerSection searchParams={params} />
       <PartnerSection searchParams={params} />
       <ParticipantsBannerSection searchParams={params} />

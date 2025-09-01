@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/layout/Footer/Footer";
 import type { Metadata } from "next";
 import ScrollHeader from "@/components/layout/Header/ScrollHeader";
+import DynamicBackground from "@/components/ui/DynamicBackground";
 
 export const metadata: Metadata = {
   title: "Dieng",
@@ -20,21 +21,12 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
       </head>
       <body style={{ fontFamily: "euclid" }} className={`antialiased bg-[#272B27]`}>
-        <div className="relative">
-          {/* Background image */}
-          <div
-            style={{
-              backgroundImage: "url('/images/background.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            className="h-[695px] w-full absolute -z-2 top-0 left-0"
-          />
+        <div>
+          <DynamicBackground />
           {/* <div className="h-[695px] w-full absolute -z-1 top-0 left-0 shadow-[0_40px_150px_-20px_rgba(0,0,0,0.9)] bg-gradient-to-b from-black/40 to-black/85" /> */}
           <main>
             <ScrollHeader />
-
-            <div className="relative px-4 sm:px-0 max-w-[1340px] mx-auto pt-60">{children}</div>
+            <div className="px-4 sm:px-0 max-w-[1340px] mx-auto">{children}</div>
           </main>
           <div>
             <Footer />

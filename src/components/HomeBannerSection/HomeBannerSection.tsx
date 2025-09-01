@@ -36,7 +36,7 @@ const HomeBannerSection = async ({ searchParams }: BannerSectionProps) => {
   }
 
   return (
-    <div>
+    <div className="absolute top-60 left-0 w-full  flex items-center justify-center z-10">
       {banners.map((banner, index) => (
         <BannerContent
           key={banner.id || index}
@@ -47,7 +47,7 @@ const HomeBannerSection = async ({ searchParams }: BannerSectionProps) => {
           titleClassName="text-center text-[42px] sm:text-[52px] "
           descriptionClassName="text-center mx-auto text-[#FFFFFFB2] justify-center"
           sloganClassName="text-center"
-          className="custom-banner-content max-w-[667px] pb-[125px] mx-auto"
+          className="custom-banner-content max-w-[667px] mx-auto"
           buttonGroupClassName="justify-center"
           buttonClassName="[&_img]:hidden" 
         />
