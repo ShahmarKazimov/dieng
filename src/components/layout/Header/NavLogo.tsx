@@ -7,8 +7,8 @@ export default function Logo() {
             <Image
                 src="/images/logo.svg"
                 alt="Logo"
-                width={154}
-                height={41}
+                width={119}
+                height={40}
                 className="w-40 h-auto"
             />
         </Link>

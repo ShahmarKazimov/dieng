@@ -58,7 +58,7 @@ export default async function ContactPage({ searchParams }: PageProps) {
     const params = await searchParams;
 
     return (
-        <div className="pt-44 mb-30 mx-auto">
+        <div className="mb-30 mx-auto">
             <Contact searchParams={params} />
         </div>
     );

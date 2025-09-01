@@ -64,15 +64,13 @@ export default async function HomePage({ searchParams }: PageProps) {
 
   return (
     <div className="space-y-[50px]">
-      <div className="max-w-3xl pt-44 mb-30 mx-auto">
-        <HomeBannerSection searchParams={params} />
-      </div>
-      <ClientCarousel searchParams={params} />
-      <AboutBannerSection searchParams={params} />
-      <ParticipantsBannerSection searchParams={params} />
-      <PricingSection searchParams={params} />
+      <HomeBannerSection searchParams={params} />
       <PartnerSection searchParams={params} />
+      <ParticipantsBannerSection searchParams={params} />
+      <AboutBannerSection searchParams={params} />
+      <PricingSection searchParams={params} />
       <LearnMoreSection searchParams={params} />
+      <ClientCarousel searchParams={params} />
     </div>
   );
 }

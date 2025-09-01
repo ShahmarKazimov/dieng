@@ -58,7 +58,7 @@ export default async function Services({ searchParams }: PageProps) {
     const params = await searchParams;
 
     return (
-        <div className="pt-44 mb-30 mx-auto">
+        <div className="mb-30 mx-auto">
             <ServicesSection searchParams={params} />
         </div>
     );

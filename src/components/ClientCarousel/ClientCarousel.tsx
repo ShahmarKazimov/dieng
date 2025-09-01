@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image"; // burayı ekledik
+import Image from "next/image"; 
 import { clientService } from "@/API/Services/clients.service";
 import { Client } from "@/lib/types/client.types";
 import enTranslations from "@/locales/en.json";
@@ -38,7 +38,7 @@ const ClientCarousel = async ({ searchParams }: ClientCarouselProps) => {
 
   return (
     <div className="py-0 sm:py-25 mb-0">
-      <h1 className="text-[#009900] text-[16px] mb-[50px] text-center">
+      <h1 className="text-white text-[16px] mb-[50px] text-center">
         {t("our-customers", "Our customers")}
       </h1>
       <div className="clients">

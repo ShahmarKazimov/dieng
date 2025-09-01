@@ -50,7 +50,7 @@ const PartnerSection = async ({ searchParams }: PartnerSectionProps) => {
   }
 
   return (
-    <div className="overflow-hidden py-[50px] flex flex-col sm:flex-row gap-y-[50px] items-center justify-between space-y-8">
+    <div className="overflow-hidden flex flex-col sm:flex-row items-center justify-between ">
       {banners.length > 0 && (
         <div className="text-center mb-0">
           {banners.map((banner, index) => (
@@ -60,9 +60,9 @@ const PartnerSection = async ({ searchParams }: PartnerSectionProps) => {
               currentLanguage={currentLanguage}
               index={index}
               imageClassName="hidden"
-              titleClassName="text-center text-[32px] sm:text-[42px] sm:text-start"
-              sloganClassName="text-center sm:text-start"
-              descriptionClassName="text-center sm:text-start text-[#FFFFFFB2]"
+              titleClassName="text-center sm:mb-0 text-[32px] sm:text-[42px] sm:text-start"
+              sloganClassName="text-center sm:text-start hidden"
+              descriptionClassName="hidden text-center sm:text-start text-[#FFFFFFB2]"
 
             />
           ))}

@@ -38,12 +38,12 @@
 
 .clients::before {
   left: 0;
-  background: linear-gradient(to right, #0B0D12, transparent);
+  background: linear-gradient(to right, #272B27, transparent);
 }
 
 .clients::after {
   right: 0;
-  background: linear-gradient(to left, #0B0D12, transparent);
+  background: linear-gradient(to left, #272B27, transparent);
 }
 
 .client_items {

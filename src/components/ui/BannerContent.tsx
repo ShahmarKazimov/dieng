@@ -34,10 +34,10 @@ const BannerContent: React.FC<BannerContentExtendedProps> = ({
     })) || [];
 
     return (
-        <div className={`flex flex-col sm:flex-row items-start justify-between text-start${className ? ` ${className}` : ''}`}>
+        <div className={`flex flex-col sm:flex-row items-center justify-between text-start${className ? ` ${className}` : ''}`}>
             <div>
                 {slogan && (
-                    <h1 className={`text-green-600 text-[14px] mb-4${sloganClassName ? ` ${sloganClassName}` : ''}`}>{slogan}</h1>
+                    <h1 className={`text-white text-[14px] mb-4${sloganClassName ? ` ${sloganClassName}` : ''}`}>{slogan}</h1>
                 )}
                 {title && (
                     <h2 className={`text-[#FFFFFF] leading-[120%] font-[euclid-Bold] mb-4 ${titleClassName ? ` ${titleClassName}` : ''}`}>{title}</h2>

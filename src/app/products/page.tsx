@@ -61,7 +61,7 @@ export default async function ProductsPage({ searchParams }: PageProps) {
     const params = await searchParams;
 
     return (
-        <div className="pt-44 mx-auto">
+        <div className="mx-auto">
             <ProductSection searchParams={params} />
             <PricingSection searchParams={params} />
             <div className='relative'>

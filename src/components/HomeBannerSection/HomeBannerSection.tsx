@@ -43,12 +43,13 @@ const HomeBannerSection = async ({ searchParams }: BannerSectionProps) => {
           bannerData={banner}
           currentLanguage={currentLanguage}
           index={index}
-          imageClassName="custom-banner-content-image"
-          titleClassName="text-center text-[32px] sm:text-[42px] "
-          descriptionClassName="text-center max-w-[800px] mx-auto text-[#FFFFFFB2] justify-center"
+          imageClassName="hidden"
+          titleClassName="text-center text-[42px] sm:text-[52px] "
+          descriptionClassName="text-center mx-auto text-[#FFFFFFB2] justify-center"
           sloganClassName="text-center"
-          className="custom-banner-content"
+          className="custom-banner-content max-w-[667px] pb-[125px] mx-auto"
           buttonGroupClassName="justify-center"
+          buttonClassName="[&_img]:hidden" 
         />
       ))}
     </div>

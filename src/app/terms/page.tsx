@@ -58,7 +58,7 @@ export default async function TermsPage({ searchParams }: PageProps) {
     const params = await searchParams;
 
     return (
-        <div className="pt-44 mb-30 mx-auto">
+        <div className="mb-30 mx-auto">
             <TermsSection searchParams={params} />
         </div>
     );

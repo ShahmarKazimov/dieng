@@ -13,6 +13,8 @@ export default function LangSelector() {
 
   const selectedLang = searchParams.get('lang') || 'en';
 
+  const isHomePage = pathname === '/';
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -40,7 +42,8 @@ export default function LangSelector() {
         value={selectedLang}
         onChange={(e) => changeLanguage(e.target.value)}
         aria-label="Select language"
-        className="cursor-pointer rounded-md text-white text-[16px] sm:text-sm shadow-sm outline-none"
+        className={`cursor-pointer rounded-md text-[16px] sm:text-sm outline-none ${isHomePage ? 'text-black' : 'text-white'
+          }`}
       >
         {DEFAULT_LANGUAGES.map(code => (
           <option

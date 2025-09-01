@@ -5,7 +5,7 @@ export default function Logo() {
     return (
         <Link href="/" className="flex items-center gap-2 justify-center sm:justify-start">
             <Image
-                src="/images/logo_footer.svg"
+                src="/images/logo.svg"
                 alt="Logo"
                 width={154}
                 height={41}

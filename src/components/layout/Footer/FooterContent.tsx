@@ -1,8 +1,6 @@
 "use client";
 
-import React, { Suspense } from "react";
-
-import AppDownloadButtons from "@/components/layout/Footer/FooterButtons";
+import React from "react";
 import FooterLogo from "../Footer/FooterLogo";
 import { FooterSection } from "@/components/layout/Footer/FooterSection";
 import { LocationInfo } from "@/components/layout/Footer/LocationInfo";
@@ -25,8 +23,8 @@ const FooterContent = () => {
 
   return (
     <footer className="bg-[#F5F6FA] pt-25 pb-6">
-      <div className="relative max-w-[78.5rem] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+      <div className="relative max-w-[1340px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
           <div className="lg:col-span-1">
             <FooterLogo />
             <p className="text-[#000000B2] text-center sm:text-start px-8 sm:px-0 leading-[110%] text-[12px] mt-4">
@@ -39,13 +37,13 @@ const FooterContent = () => {
 
           <div className="lg:col-span-1 flex justify-center text-center sm:text-start sm:justify-end">
             <FooterSection
-              title={t("about_us", "About us")}
+              title={t("company", "Company")}
               links={[
+                { href: "/", text: t("home") },
+                { href: "/about", text: t("about_us") },
                 { href: "/products", text: t("productsAndSolutions") },
+                { href: "/blog", text: t("blogs") },
                 { href: "/services", text: t("services") },
-                { href: "/news-blog", text: t("newsBlog") },
-                { href: "/modules", text: t("moduleOverview") },
-                { href: "/contact", text: t("contact") },
               ]}
             />
           </div>
@@ -54,19 +52,12 @@ const FooterContent = () => {
             <FooterSection
               title={t("support", "Support")}
               links={[
+                { href: "tel:+49577483373772", text: "(+49) 577 483 373772" },
                 { href: "mailto:support@wood-in-vision.com", text: t("supportWoodInVision", "support@wood-in-vision.com") },
                 { href: "/privacy", text: t("privacyPolicy") },
                 { href: "/terms", text: t("terms") },
-                // { href: "/help-faq", text: t("helpFaq") },
               ]}
             />
-          </div>
-
-          <div className="lg:col-span-1 flex flex-col items-center sm:items-end">
-            <h4 className="font-[euclid-Bold] text-[#0E0E0E] mb-3 relative sm:right-8">{t("download", "Download")}</h4>
-            <Suspense fallback={<div>Loading...</div>}>
-              <AppDownloadButtons />
-            </Suspense>
           </div>
         </div>
 
