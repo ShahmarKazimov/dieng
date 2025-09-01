@@ -28,7 +28,7 @@ const ParticipantsBannerSection = async ({ searchParams }: BannerSectionProps) =
             width: '100vw'
           }}
         />
-        <div className="relative pt-[50px]">
+        <div className="relative py-[50px]">
           <BannerContent
             bannerData={banner}
             currentLanguage={lang}

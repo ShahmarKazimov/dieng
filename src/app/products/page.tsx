@@ -3,7 +3,6 @@
 import { bannerTranslationService } from '@/API/Services/banner.service';
 import { Metadata } from 'next';
 import ProductSection from '@/components/Products/ProductSection';
-import PricingSection from '@/components/Pricing/PricingSection';
 import HardwareSection from '@/components/HardwareSolutions/HardwareSection';
 import AboutBannerSection from '@/components/AboutInHome/AboutInHomeSection';
 
@@ -63,7 +62,6 @@ export default async function ProductsPage({ searchParams }: PageProps) {
     return (
         <div className="mx-auto">
             <ProductSection searchParams={params} />
-            <PricingSection searchParams={params} />
             <div className='relative'>
                 <HardwareSection searchParams={params} />
             </div>
