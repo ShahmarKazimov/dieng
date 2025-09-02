@@ -7,7 +7,7 @@ import { Suspense } from "react";
 
 export default function Header() {
     return (
-        <header className="w-full rounded-[8px] overflow-hidden h-[72px] bg-[#FFFFFF57] backdrop-blur-[22px] z-50 ">
+        <header className="w-full rounded-[8px] overflow-hidden h-[72px] bg-[#FFFFFF57] backdrop-blur-[22px]">
             <nav className="relative z-10 h-full px-4 py-3 flex items-center justify-between">
                 <Logo />
                 <div className="hidden md:block">

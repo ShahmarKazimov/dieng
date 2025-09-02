@@ -1,5 +1,4 @@
 // app/products/page.tsx
-
 import { bannerTranslationService } from '@/API/Services/banner.service';
 import { Metadata } from 'next';
 import ProductSection from '@/components/Products/ProductSection';
