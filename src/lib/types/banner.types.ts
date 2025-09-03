@@ -90,6 +90,7 @@ export interface BannerContentExtendedProps extends BannerContentProps {
   imageClassName?: string;
   buttonClassName?: string;
   buttonGroupClassName?: string;
+  buttonHref?: string; // Override button URL
 }
 
 export type BannerData = ProcessedBannerData;

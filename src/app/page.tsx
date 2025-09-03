@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import ClientCarousel from '../components/ClientCarousel/ClientCarousel';
 import PartnerSection from '@/components/Partner/PartnerSection';
 import ParticipantsBannerSection from '@/components/Participants/ParticipantsSection';
+import FaqWrapper from '@/components/FAQ/FaqWrapper';
 
 interface PageProps {
   searchParams: Promise<{ lang?: string }>;
@@ -66,6 +67,7 @@ export default async function HomePage({ searchParams }: PageProps) {
       <PartnerSection searchParams={params} />
       <ParticipantsBannerSection searchParams={params} />
       <AboutBannerSection searchParams={params} />
+      <FaqWrapper searchParams={params} />
       <ClientCarousel searchParams={params} />
     </div>
   );

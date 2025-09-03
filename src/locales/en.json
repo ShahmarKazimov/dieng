@@ -34,5 +34,17 @@
   "company": "Company",
   "companyPlaceholder": "Company",
   "message": "Your Message",
-  "messagePlaceholder": "Your Message"
+  "messagePlaceholder": "Your Message",
+  "faq1Question": "What Is Die Ing?",
+  "faq1Answer": "Die Ing Is The Company Behind Two Innovative Digital Platforms: WOOD.IN.VISION, Focused On Modernizing Forestry, And INDUSTRY.IN.VISION, Designed To Optimize Industrial Processes.",
+  "faq2Question": "How Does WOOD.IN.VISION Support Forestry Professionals?",
+  "faq2Answer": "WOOD.IN.VISION provides comprehensive digital tools for modern forestry management, including inventory tracking, planning optimization, and sustainable practice implementation.",
+  "faq3Question": "Who Can Benefit From INDUSTRY.IN.VISION?",
+  "faq3Answer": "INDUSTRY.IN.VISION is designed for manufacturing companies, industrial process managers, and businesses looking to optimize their operational efficiency through digital transformation.",
+  "faq4Question": "Is The Platform Cloud-Based?",
+  "faq4Answer": "Yes, both platforms are fully cloud-based, ensuring accessibility from anywhere, automatic updates, and secure data storage with enterprise-grade security measures.",
+  "faq5Question": "Can The Platforms Be Customized?",
+  "faq5Answer": "Absolutely! Both WOOD.IN.VISION and INDUSTRY.IN.VISION offer extensive customization options to meet specific industry requirements and business workflows.",
+  "faq6Question": "Do You Provide Training And Support?",
+  "faq6Answer": "Yes, we provide comprehensive training programs, documentation, and ongoing technical support to ensure successful platform adoption and optimal usage."
 }
