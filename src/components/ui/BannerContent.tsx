@@ -15,11 +15,12 @@ const BannerContent: React.FC<BannerContentExtendedProps> = ({
     imageClassName,
     buttonClassName,
     buttonGroupClassName,
+    buttonHref,
 }) => {
     const { title, description, photo, slogan, buttons } = bannerData;
     const transformedButtons = buttons?.filter(Boolean).map((button) => ({
         id: button.id,
-        url: button.url,
+        url: buttonHref || button.url, 
         bannerId: button.bannerId,
         icon: button.icon,
         translations: [

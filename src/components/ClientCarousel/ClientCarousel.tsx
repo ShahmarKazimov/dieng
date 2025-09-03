@@ -47,7 +47,7 @@ const ClientCarousel = async ({ searchParams }: ClientCarouselProps) => {
   const duplicatedClients = [...clients, ...clients, ...clients];
 
   return (
-    <div className="py-0 sm:py-25 mb-0">
+    <div className="py-20 sm:py-25 mb-0">
       {banners.length > 0 && (
         <BannerContent
           bannerData={banners[0]}

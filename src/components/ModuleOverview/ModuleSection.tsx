@@ -71,8 +71,6 @@ const ModuleBannerSection = async ({ searchParams }: BannerSectionProps) => {
           }}
         />
 
-
-
         {/* Modules Section */}
         {sortedModules.map((module, moduleIndex) => (
           <div key={module.id} className="max-w-5xl flex flex-col mx-auto pb-[50px] sm:pb-25">

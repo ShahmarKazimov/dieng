@@ -1,25 +1,13 @@
+// components/layout/Footer/SocialLinks.tsx
 import Facebook from "../../../../public/icons/Facebook.svg";
 import Image from "next/image";
 import Instagram from "../../../../public/icons/Instagram.svg";
 import Link from "next/link";
-import Linkedin from "../../../../public/icons/Linkedin.svg";
-// components/layout/Footer/SocialLinks.tsx
 import React from "react";
 import { SocialLinksProps } from "@/lib/types/footer.types";
-import Youtube from "../../../../public/icons/youtube.png";
 
 export const SocialLinks: React.FC<SocialLinksProps> = ({ className = "" }) => {
   const socialLinks = [
-    {
-      name: "Youtube",
-      href: "https://www.youtube.com/channel/UCMCS6THRdYim-biFOeIUOAQ",
-      icon: <Image src={Youtube} alt="Youtube" width={20} height={20} />,
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/company/wood-in-vision/",
-      icon: <Image src={Linkedin} alt="LinkedIn" width={20} height={20} />,
-    },
     {
       name: "Instagram",
       href: "https://www.instagram.com/wood.in.vision/",

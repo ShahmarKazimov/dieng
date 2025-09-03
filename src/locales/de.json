@@ -33,5 +33,17 @@
   "company": "Firma",
   "companyPlaceholder": "Firma",
   "message": "Ihre Nachricht",
-  "messagePlaceholder": "Ihre Nachricht"
+  "messagePlaceholder": "Ihre Nachricht",
+  "faq1Question": "Was ist Die Ing?",
+  "faq1Answer": "Die Ing ist das Unternehmen hinter zwei innovativen digitalen Plattformen: WOOD.IN.VISION, fokussiert auf die Modernisierung der Forstwirtschaft, und INDUSTRY.IN.VISION, entwickelt zur Optimierung industrieller Prozesse.",
+  "faq2Question": "Wie unterstützt WOOD.IN.VISION Forstfachleute?",
+  "faq2Answer": "WOOD.IN.VISION bietet umfassende digitale Tools für modernes Forstmanagement, einschließlich Bestandsverfolgung, Planungsoptimierung und nachhaltiger Praxisimplementierung.",
+  "faq3Question": "Wer kann von INDUSTRY.IN.VISION profitieren?",
+  "faq3Answer": "INDUSTRY.IN.VISION ist für Produktionsunternehmen, Industrieprozessmanager und Unternehmen konzipiert, die ihre operative Effizienz durch digitale Transformation optimieren möchten.",
+  "faq4Question": "Ist die Plattform cloud-basiert?",
+  "faq4Answer": "Ja, beide Plattformen sind vollständig cloud-basiert und gewährleisten Zugänglichkeit von überall, automatische Updates und sichere Datenspeicherung mit Sicherheitsmaßnahmen auf Unternehmensniveau.",
+  "faq5Question": "Können die Plattformen angepasst werden?",
+  "faq5Answer": "Absolut! Sowohl WOOD.IN.VISION als auch INDUSTRY.IN.VISION bieten umfangreiche Anpassungsoptionen, um spezifische Branchenanforderungen und Geschäftsabläufe zu erfüllen.",
+  "faq6Question": "Bieten Sie Schulungen und Support an?",
+  "faq6Answer": "Ja, wir bieten umfassende Schulungsprogramme, Dokumentation und kontinuierlichen technischen Support, um eine erfolgreiche Plattformeinführung und optimale Nutzung zu gewährleisten."
 }

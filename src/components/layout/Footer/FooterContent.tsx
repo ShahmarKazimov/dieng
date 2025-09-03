@@ -22,7 +22,7 @@ const FooterContent = () => {
   const t = (key: string, fallback?: string) => (translations as Record<string, string>)[key] || fallback || key;
 
   return (
-    <footer className="bg-[#F5F6FA] pt-25 pb-6">
+    <footer className="bg-[#F5F6FA] pt-[50px] pb-6">
       <div className="relative max-w-[1340px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
           <div className="lg:col-span-1">
@@ -61,7 +61,7 @@ const FooterContent = () => {
           </div>
         </div>
 
-        <div className="sm:mt-25 mt-20 flex flex-col gap-y-4 md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="pt-[50px] flex flex-col gap-y-4 md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-xs text-[#000000] order-3 sm:order-1 mb-0">
             {t("copyright", "Copyright, All Right Are Reserved ©2025, WOOD.IN.VISION")}
           </div>
