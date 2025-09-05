@@ -11,7 +11,15 @@ const DynamicBackground = () => {
                 backgroundImage: "url('/images/background-2.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                className: "opacity-20",
+                filter: "brightness(0.6)", 
+            };
+        }
+        if (pathname.includes('/about')) {
+            return {
+                backgroundImage: "url('/images/about-background.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                filter: "brightness(0.6)", 
             };
         }
 
@@ -19,6 +27,7 @@ const DynamicBackground = () => {
             backgroundImage: "url('/images/background.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            filter: "brightness(0.9)", 
         };
     };
 
@@ -27,7 +36,7 @@ const DynamicBackground = () => {
             return "h-[552px]";
         }
         if (pathname.includes('/about')) {
-            return "h-[600px]";
+            return "h-[552px]";
         }
         if (pathname.includes('/products')) {
             return "h-[750px]";
@@ -36,7 +45,7 @@ const DynamicBackground = () => {
             return "h-[650px]";
         }
 
-        return "h-[695px]"; 
+        return "h-[695px]";
     };
 
     return (

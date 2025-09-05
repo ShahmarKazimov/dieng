@@ -47,7 +47,7 @@ const HomeBannerSection = async ({ searchParams }: BannerSectionProps) => {
           titleClassName="text-center text-[42px] sm:text-[52px] "
           descriptionClassName="text-center mx-auto text-[#FFFFFFB2] justify-center"
           sloganClassName="text-center"
-          className="custom-banner-content max-w-[667px] mx-auto"
+          className="custom-banner-content max-w-[667px] mx-auto px-4 sm:px-0"
           buttonGroupClassName="justify-center"
           buttonClassName="[&_img]:hidden" 
         />
