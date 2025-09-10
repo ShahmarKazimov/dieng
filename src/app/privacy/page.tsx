@@ -58,7 +58,7 @@ export default async function PrivacyPage({ searchParams }: PageProps) {
     const params = await searchParams;
 
     return (
-        <div className="mb-30 mx-auto">
+        <div>
             <Privacy searchParams={params} />
         </div>
     );

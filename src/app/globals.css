@@ -151,3 +151,9 @@
   display: flex;
   flex-direction: column;
 }
+
+@layer utilities {
+  .custom-list li::marker {
+    content: counter(list-item) ") ";
+  }
+}

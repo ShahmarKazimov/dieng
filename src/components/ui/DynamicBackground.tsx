@@ -11,7 +11,7 @@ const DynamicBackground = () => {
                 backgroundImage: "url('/images/background-2.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                filter: "brightness(0.6)", 
+                filter: "brightness(0.6)",
             };
         }
         if (pathname.includes('/about')) {
@@ -19,15 +19,21 @@ const DynamicBackground = () => {
                 backgroundImage: "url('/images/about-background.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                filter: "brightness(0.6)", 
+                filter: "brightness(0.6)",
             };
         }
-            if (pathname.includes('/services')) {
+        if (pathname.includes('/services')) {
             return {
                 backgroundImage: "url('/images/background-products.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                filter: "brightness(0.8)", 
+                filter: "brightness(0.8)",
+            };
+        }
+        if (pathname.includes('/privacy')) {
+            return {
+                backgroundColor: "transparent",
+                backgroundImage: "none",
             };
         }
 
@@ -35,7 +41,7 @@ const DynamicBackground = () => {
             backgroundImage: "url('/images/background.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            filter: "brightness(0.9)", 
+            filter: "brightness(0.9)",
         };
     };
 
@@ -48,6 +54,9 @@ const DynamicBackground = () => {
         }
         if (pathname.includes('/services')) {
             return "h-[552px]";
+        }
+        if (pathname.includes('/privacy')) {
+            return "h-[400px]";
         }
 
         return "h-[695px]";
