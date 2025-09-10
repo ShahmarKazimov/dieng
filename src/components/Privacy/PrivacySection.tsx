@@ -67,20 +67,35 @@ const PrivacySection = async ({ searchParams }: BannerSectionProps) => {
           currentLanguage={currentLanguage}
           index={index}
           imageClassName='hidden'
-          className={index === 0 ? "text-center w-max mx-auto" : ""}
+          className="items-center text-center px-4 sm:px-0 sm:w-max mx-auto absolute top-42 left-0 w-full right-0 flex justify-center z-10"
           titleClassName={"text-white text-center leading-[120%] text-[32px] sm:w-[819px] w-[343px] sm:text-[42px] font-[euclid-Bold] mb-3 text-center"}
           descriptionClassName={"text-[#FFFFFFB2] text-[14px] mx-auto sm:w-[819px] w-[343px] text-center"}
           sloganClassName='text-center'
         />
       ))}
-      {privacyContentBanners.map((banner, index) => (
-        <PrivacyContent
-          key={banner.id || index}
-          bannerData={banner}
-          currentLanguage={currentLanguage}
-          index={index}
+      <div className='relative'>
+
+        <div
+          className="absolute inset-0 bg-[#F5F6FA]"
+          style={{
+            left: '50%',
+            right: '50%',
+            marginLeft: '-50.5vw',
+            marginRight: '-50vw',
+            width: '100vw'
+          }}
         />
-      ))}
+        <div className='relative'>
+          {privacyContentBanners.map((banner, index) => (
+            <PrivacyContent
+              key={banner.id || index}
+              bannerData={banner}
+              currentLanguage={currentLanguage}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
