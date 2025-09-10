@@ -60,7 +60,7 @@ const BannerContent: React.FC<BannerContentExtendedProps> = ({
                 )}
             </div>
             {photo && (
-                <div className={`w-full rounded-xl sm:w-[468px] h-[340px] overflow-hidden${imageClassName ? ` ${imageClassName}` : ''}`}>
+                <div className={`w-full sm:w-[468px] h-[340px] overflow-hidden${imageClassName ? ` ${imageClassName}` : ''}`}>
                     <Image
                         src={`${process.env.NEXT_PUBLIC_API_URL}/${photo}`}
                         priority

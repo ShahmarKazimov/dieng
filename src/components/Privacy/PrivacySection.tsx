@@ -68,12 +68,8 @@ const PrivacySection = async ({ searchParams }: BannerSectionProps) => {
           index={index}
           imageClassName='hidden'
           className={index === 0 ? "text-center w-max mx-auto" : ""}
-          titleClassName={
-            index === 0 ? "text-white text-center leading-[120%] text-[32px] sm:w-[819px] w-[343px] sm:text-[42px] font-[euclid-Bold] mb-3 text-center" : ""
-          }
-          descriptionClassName={
-            index === 0 ? "text-[#FFFFFFB2] text-[14px] mx-auto sm:w-[819px] w-[343px] text-center" : ""
-          }
+          titleClassName={"text-white text-center leading-[120%] text-[32px] sm:w-[819px] w-[343px] sm:text-[42px] font-[euclid-Bold] mb-3 text-center"}
+          descriptionClassName={"text-[#FFFFFFB2] text-[14px] mx-auto sm:w-[819px] w-[343px] text-center"}
           sloganClassName='text-center'
         />
       ))}
