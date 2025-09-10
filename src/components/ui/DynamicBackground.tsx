@@ -22,6 +22,14 @@ const DynamicBackground = () => {
                 filter: "brightness(0.6)", 
             };
         }
+            if (pathname.includes('/services')) {
+            return {
+                backgroundImage: "url('/images/background-products.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                filter: "brightness(0.8)", 
+            };
+        }
 
         return {
             backgroundImage: "url('/images/background.jpg')",
@@ -38,11 +46,8 @@ const DynamicBackground = () => {
         if (pathname.includes('/about')) {
             return "h-[552px]";
         }
-        if (pathname.includes('/products')) {
-            return "h-[750px]";
-        }
         if (pathname.includes('/services')) {
-            return "h-[650px]";
+            return "h-[552px]";
         }
 
         return "h-[695px]";

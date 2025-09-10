@@ -43,7 +43,7 @@ const ProductSection = async ({ searchParams }: BannerSectionProps) => {
           bannerData={banner}
           currentLanguage={currentLanguage}
           index={index}
-          className="text-center w-max mx-auto"
+          className="items-center text-center  px-4 sm:px-0 sm:w-max mx-auto absolute top-60 left-0 w-full right-0 flex justify-center z-10"
           titleClassName="text-[#000000] leading-[120%] text-[32px] sm:text-[42px] text-center font-[euclid-Bold] mb-3"
           descriptionClassName="text-[#FFFFFFB2] text-sm text-center mx-auto sm:w-[564px] w-[343px]"
           sloganClassName="text-green-600 text-[14px] text-center"

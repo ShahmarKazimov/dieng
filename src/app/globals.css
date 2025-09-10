@@ -146,3 +146,8 @@
 .htmlDescription li {
   list-style: disc;
 }
+
+.service-banner {
+  display: flex;
+  flex-direction: column;
+}
