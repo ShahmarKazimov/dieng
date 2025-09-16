@@ -20,9 +20,7 @@ export default function NavLinks() {
     const navItems = [
         { name: t('home', 'Home'), href: '/' },
         { name: t('about_us', 'About us'), href: '/about' },
-        { name: t('products', 'Products & Solutions'), href: '/products' },
         { name: t('services', 'Services'), href: '/services' },
-        { name: t('blogs', 'Blogs'), href: '/blogs' },
     ];
 
     const isHomePage = pathname === '/';

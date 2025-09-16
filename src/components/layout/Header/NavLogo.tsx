@@ -7,9 +7,9 @@ export default function Logo() {
             <Image
                 src="/images/logo.svg"
                 alt="Logo"
-                width={119}
-                height={40}
-                className="w-40 h-auto"
+                width={106}
+                height={25}
+                className="w-[106px] h-auto"
             />
         </Link>
     );

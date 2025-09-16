@@ -26,9 +26,7 @@ export default function MobileMenuButton() {
 
     const navItems = [
         { name: t('about_us', 'About us'), href: '/about' },
-        { name: t('products', 'Products & Solutions'), href: '/products' },
         { name: t('services', 'Services'), href: '/services' },
-        { name: t('blogs', 'News & Blogs'), href: '/blogs' },
         { name: t('modules', 'Module Overview'), href: '/modules' },
     ];
 

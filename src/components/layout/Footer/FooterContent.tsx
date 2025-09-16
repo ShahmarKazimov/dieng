@@ -41,8 +41,6 @@ const FooterContent = () => {
               links={[
                 { href: "/", text: t("home") },
                 { href: "/about", text: t("about_us") },
-                { href: "/products", text: t("productsAndSolutions") },
-                { href: "/blog", text: t("blogs") },
                 { href: "/services", text: t("services") },
               ]}
             />
