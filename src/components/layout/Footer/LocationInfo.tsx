@@ -1,6 +1,6 @@
+// components/layout/Footer/LocationInfo.tsx
 import Image from 'next/image';
 import Map from '../../../../public/icons/Rectangle 3.svg';
-// components/layout/Footer/LocationInfo.tsx
 import React from 'react';
 
 export const LocationInfo: React.FC = () => {
